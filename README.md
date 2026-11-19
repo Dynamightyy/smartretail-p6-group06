@@ -36,3 +36,15 @@ For M3, I implement the logic for finding the requested date and the most recent
 My planned testing work includes checking the KPI calculations against the sample data, testing days with zero visitors, and checking how the program handles gaps between dates. She will record the expected and actual results in the team's test case file.
 
 So far, I have drawn the team's main flowchart, cloned the repository, opened the project in VS Code, updated her local `main` branch, and created a separate branch for the KPI work. I have also checked the Pull requests page and compared `branch-1` with `main` to see whether any changes were ready for the M1 setup pull request.
+
+### Bích Thủy — Member 3, Alert Engine
+
+For M1, I review the Alert Engine requirements, identify the three alert conditions with their `HIGH` and `MEDIUM` severities, and plan the rule order, alert generation, `PENDING` proposed actions, and stable sorting. I also coordinate with the team on shared data structures and KPI inputs, and help check the alert flowchart and pseudocode before the M1 pull request.
+
+For M2, I implement the three alert conditions in the required order, assign `HIGH` or `MEDIUM` severity, and create a `PENDING` proposed action for each triggered alert. I prepare the flowchart and pseudocode for my code and submit them in my first code pull request from a feature branch.
+
+For M3, I implement stable bubble sort so `HIGH` alerts come before `MEDIUM` alerts while keeping the original order for equal severity. I integrate the alert logic with the team's KPI and shared data structures, test it on sample and edge cases, and submit the code with its flowchart and pseudocode in my second code pull request.
+
+My testing plan covers boundary values for all three alert rules, checking that `visitors = 0` does not trigger a Low Conversion alert, verifying `HIGH` before `MEDIUM` ordering and equal-severity order stability, and confirming `PENDING` proposed actions.
+
+So far, I have reviewed the Alert Engine requirements and task distribution, set up the repository locally, and started checking the flowchart and pseudocode for the team's M1 setup.
