@@ -9,3 +9,5 @@ For M3, I implement the logic for finding the requested date and the most recent
 My planned testing work includes checking the KPI calculations against the sample data, testing days with zero visitors, and checking how the program handles gaps between dates. She will record the expected and actual results in the team's test case file.
 
 So far, I have drawn the team's main flowchart, cloned the repository, opened the project in VS Code, updated her local `main` branch, and created a separate branch for the KPI work. I have also checked the Pull requests page and compared `branch-1` with `main` to see whether any changes were ready for the M1 setup pull request.
+### Bích Thủy - Member 3, Alert Engine
+For M1,
