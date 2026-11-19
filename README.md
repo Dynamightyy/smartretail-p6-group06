@@ -1,4 +1,31 @@
 # smartretail-p6-group06
+### Ly Ly - Leader, Data Input & Validation
+For M1: Repository Setup and Project Planning
+Created the GitHub repository and organized the initial project structure.
+Set up the team collaboration workflow and task distribution.
+Coordinated the development of the core flowchart and pseudocode.
+Managed repository organization and milestone preparation.
+
+For M2: Data Input and Validation
+Define shared struct types and data structures for the project.
+Implement CSV file reading using ifstream and getline.
+Validate input records and skip invalid rows with appropriate warnings.
+Store valid records in a vector for other modules to use.
+Handle missing files and empty datasets.
+Submit the implementation with its flowchart and pseudocode through a Pull Request.
+
+For M3: Integration and Testing
+Integrate the data input module with other team members' functions.
+Verify data processing using sample and edge-case datasets.
+Fix integration issues and coordinate testing with the team.
+Testing Plan
+Test invalid CSV records, missing files, and empty datasets.
+Verify that valid records are stored correctly and warnings are displayed for invalid input.
+GitHub Responsibilities
+Manage the repository and coordinate team contributions.
+Review Pull Requests and merge approved changes.
+Monitor milestone requirements and maintain project documentation.
+
 ### Thu Hoài — Member 2, KPI and Date Processing
 For M1, I am responsible for drawing the team's main flowchart for generating alerts for a single day. The flowchart shows how the program checks for stockouts, a low conversion rate, and revenue below target. It also shows how the program sorts alerts by priority and creates a proposed action with `PENDING` status for each alert. I work with LyLy to check that the flowchart matches the pseudocode before it is added to the team's M1 setup pull request.
 
