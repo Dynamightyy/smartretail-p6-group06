@@ -8,7 +8,7 @@ Core function: 'evaluateDay ()' - T10 - Bích Thủy.
 | --- | --- | --- | --- | --- | --- | --- |
 | T01 | Set up public repository, invite collaborators and protect main | GitHub repository settings | Ly Ly | N/A | Not needed | N/A |
 | T02 | Create repository skeleton, PR template and copy lecturer data | `.gitignore`, `.github/pull_request_template.md`, `src/`, `data/`, `tests/`, `docs/` | Ly Ly | Thu Hoài | Not needed | Pending |
-| T03 | Create task assignment table | `README.md` | Thu Hoài | Ly Ly | Not needed | Pending |
+| T03 | Create task assignment table | `README.md` | Thu Hoài | Ly Ly | Not needed | #7 |
 | T04 | Define shared structs and read daily_store.csv into a vector | Shared structs, `loadDailyStore()` | Ly Ly | Thu Hoài | Required | Pending |
 | T05 | Validate CSV records, skip invalid rows and print warnings with line numbers | `isValidDate()`, `validateRecord()` | Ly Ly | Thanh Thảo | Required | Pending |
 | T06 | Calculate conversion and target achievement; handle zero denominators | `calculateKPI()` | Thu Hoài | Bích Thủy | Required | Pending |
@@ -44,4 +44,3 @@ Notes:
 ## AI declaration
 
 ChatGPT was used to assist in formatting our existing task distribution into a structured assignment table and suggesting initial naming conventions. All task scopes, function designs, and reviewer assignments were reviewed, adjusted, and finalized by the team, with each member independently implementing their assigned components.
-
