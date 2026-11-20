@@ -1,50 +1,46 @@
-# smartretail-p6-group06
-### Ly Ly - Leader, Data Input & Validation
-For M1: Repository Setup and Project Planning
-Created the GitHub repository and organized the initial project structure.
-Set up the team collaboration workflow and task distribution.
-Coordinated the development of the core flowchart and pseudocode.
-Managed repository organization and milestone preparation.
+# SmartRetail P6 - Store Intelligence & Alert Engine
+## Task assignment table
+This plan follows our team's agreed areas of responsibility.
+Function names, reviewers and supporting documentation tasks are proposed and will be agreed during review.
+All C++ functions and structs will be implemented in 'src/main.cpp'.
+Core function: 'evaluateDay ()' - T10 - Bích Thủy.
+| ID | Task | Function / file | Assignee | Reviewer | Flowchart | PR |
+| --- | --- | --- | --- | --- | --- | --- |
+| T01 | Set up public repository, invite collaborators and protect main | GitHub repository settings | Ly Ly | N/A | Not needed | N/A |
+| T02 | Create repository skeleton, PR template and copy lecturer data | `.gitignore`, `.github/pull_request_template.md`, `src/`, `data/`, `tests/`, `docs/` | Ly Ly | Thu Hoài | Not needed | Pending |
+| T03 | Create task assignment table | `README.md` | Thu Hoài | Ly Ly | Not needed | #7 |
+| T04 | Define shared structs and read daily_store.csv into a vector | Shared structs, `loadDailyStore()` | Ly Ly | Thu Hoài | Required | Pending |
+| T05 | Validate CSV records, skip invalid rows and print warnings with line numbers | `isValidDate()`, `validateRecord()` | Ly Ly | Thanh Thảo | Required | Pending |
+| T06 | Calculate conversion and target achievement; handle zero denominators | `calculateKPI()` | Thu Hoài | Bích Thủy | Required | Pending |
+| T07 | Filter store records, sort dates, recursively find the selected date and locate the previous available date | `filterStoreDays()`, `sortDaysByDate()`, `findDay()`, `previousDay()` | Thu Hoài | Ly Ly | Required | Pending |
+| T08 | Compare the selected day with the previous available day | `compareDays()` | Thu Hoài | Thanh Thảo | Required | Pending |
+| T09 | Check inventory, conversion and target alert rules | `checkInventory()`, `checkConversion()`, `checkTarget()` | Bích Thủy | Thu Hoài | Required | Pending |
+| T10 | CORE: generate daily alerts and sort by severity using stable bubble sort | `evaluateDay()`, `sortAlerts()` | Bích Thủy | Ly Ly | Required | Pending |
+| T11 | Create one proposed action per alert with PENDING status | `createProposedActions()` | Bích Thủy | Thanh Thảo | Required | Pending |
+| T12 | Print the daily KPI report, alerts and proposed actions | `printReport()` | Thanh Thảo | Thu Hoài | Required | Pending |
+| T13 | Print the TREND table for every available day of the selected store | `printTrend()` | Thanh Thảo | Bích Thủy | Required | Pending |
+| T14 | Calculate and print HIGH-alert days, lowest conversion and longest alert streak | `calculateSummary()`, `printSummary()` | Thanh Thảo | Ly Ly | Required | Pending |
+| T15 | Handle command-line arguments, defaults, errors and the overall program flow | `main()` | Ly Ly | Thanh Thảo | Required | Pending |
+| T16 | Document overall flow, function relationships, structs, input/output and algorithms | `docs/architecture.md` | Ly Ly | Thanh Thảo | Not needed | Pending |
+| T17 | Write TC01–TC07 and their expected outputs | `tests/test_cases.md`, `tests/expected/` | Bích Thủy | Thu Hoài | Not needed | Pending |
+| T18 | Run tests on sample, full and edge data; record actual results and Pass/Fail | `tests/test_cases.md` | Thanh Thảo | Bích Thủy | Not needed | Pending |
+| T19 | Prepare presentation slides and the live demo plan | `docs/slides.pdf` | Thanh Thảo | Bích Thủy | Not needed | Pending |
+| T20 | Complete README specification, build/run instructions, assumptions, references and AI declaration | `README.md` | Thu Hoài | Ly Ly | Not needed | Pending |
+| T21 | Check the final submission and push the final tag | Git tag `final` on `main` | Ly Ly | N/A | Not needed | N/A |
+| T22 | Draw the main project flowchart | `docs/flowcharts/` | Thu Hoài | Ly Ly | Required | Pending |
 
-For M2: Data Input and Validation
-Define shared struct types and data structures for the project.
-Implement CSV file reading using ifstream and getline.
-Validate input records and skip invalid rows with appropriate warnings.
-Store valid records in a vector for other modules to use.
-Handle missing files and empty datasets.
-Submit the implementation with its flowchart and pseudocode through a Pull Request.
+Notes:
 
-For M3: Integration and Testing
-Integrate the data input module with other team members' functions.
-Verify data processing using sample and edge-case datasets.
-Fix integration issues and coordinate testing with the team.
-Testing Plan
-Test invalid CSV records, missing files, and empty datasets.
-Verify that valid records are stored correctly and warnings are displayed for invalid input.
-GitHub Responsibilities
-Manage the repository and coordinate team contributions.
-Review Pull Requests and merge approved changes.
-Monitor milestone requirements and maintain project documentation.
+- `Required` means a flowchart and pseudocode must accompany the code task;
+  it does not mean those documents are already complete.
+- Each code task must include `docs/flowcharts/Txx-task-name.md`,
+  containing its flowchart image and pseudocode.
+- `Pending` must be replaced with the actual PR number or link.
+- `N/A` identifies repository settings or tagging work that does not use a PR.
+- Reviewers must be different from assignees.
+- Each member must author at least two merged code PRs and one merged
+  non-code PR, and review at least two PRs from other members.
 
-### Thu Hoài — Member 2, KPI and Date Processing
-For M1, I am responsible for drawing the team's main flowchart for generating alerts for a single day. The flowchart shows how the program checks for stockouts, a low conversion rate, and revenue below target. It also shows how the program sorts alerts by priority and creates a proposed action with `PENDING` status for each alert. I work with LyLy to check that the flowchart matches the pseudocode before it is added to the team's M1 setup pull request.
+## AI declaration
 
-For M2, I implement the calculation of two daily KPIs. The conversion rate is calculated by dividing the number of orders by the number of visitors. Target achievement is calculated by dividing actual revenue by the revenue target. Both are expressed as percentages. If there are zero visitors on a given day, the program displays the conversion rate as `n/a`. I prepare a flowchart and pseudocode for the KPI calculation and submits them with the code in her first pull request.
-
-For M3, I implement the logic for finding the requested date and the most recent earlier date with available data for the same store. If the user leaves the date blank, the program selects the latest date with available data. When both days have the values needed for comparison, the program calculates how much each KPI increased or decreased in percentage points. The code, flowchart, and pseudocode are submitted together in her second pull request.
-
-My planned testing work includes checking the KPI calculations against the sample data, testing days with zero visitors, and checking how the program handles gaps between dates. She will record the expected and actual results in the team's test case file.
-
-So far, I have drawn the team's main flowchart, cloned the repository, opened the project in VS Code, updated her local `main` branch, and created a separate branch for the KPI work. I have also checked the Pull requests page and compared `branch-1` with `main` to see whether any changes were ready for the M1 setup pull request.
-
-### Bích Thủy — Member 3, Alert Engine
-
-For M1, I review the Alert Engine requirements, identify the three alert conditions with their `HIGH` and `MEDIUM` severities, and plan the rule order, alert generation, `PENDING` proposed actions, and stable sorting. I also coordinate with the team on shared data structures and KPI inputs, and help check the alert flowchart and pseudocode before the M1 pull request.
-
-For M2, I implement the three alert conditions in the required order, assign `HIGH` or `MEDIUM` severity, and create a `PENDING` proposed action for each triggered alert. I prepare the flowchart and pseudocode for my code and submit them in my first code pull request from a feature branch.
-
-For M3, I implement stable bubble sort so `HIGH` alerts come before `MEDIUM` alerts while keeping the original order for equal severity. I integrate the alert logic with the team's KPI and shared data structures, test it on sample and edge cases, and submit the code with its flowchart and pseudocode in my second code pull request.
-
-My testing plan covers boundary values for all three alert rules, checking that `visitors = 0` does not trigger a Low Conversion alert, verifying `HIGH` before `MEDIUM` ordering and equal-severity order stability, and confirming `PENDING` proposed actions.
-
-So far, I have reviewed the Alert Engine requirements and task distribution, set up the repository locally, and started checking the flowchart and pseudocode for the team's M1 setup.
+ChatGPT was used to assist in formatting our existing task distribution into a structured assignment table and suggesting initial naming conventions. All task scopes, function designs, and reviewer assignments were reviewed, adjusted, and finalized by the team, with each member independently implementing their assigned components.
