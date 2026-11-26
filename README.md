@@ -10,7 +10,7 @@
 | Lưu Thị Ly Ly | Dynamightyy | Team leader; data input and validation |
 | Trương Phạm Thu Hoài | Hoaitruong-29 | KPI and date processing; core flowchart; README |
 | Đỗ Bích Thủy | boa-pooper | Alert generation, severity sorting and proposed actions |
-| Nguyễn Thanh Thảo | boa-pooper | Trend, summary and report formatting |
+| Nguyễn Thanh Thảo | luvmaxx | Trend, summary and report formatting |
 
 Instructor: Lê Văn Thể 
 Instructor's GitHub account: [@vvvanthe](https://github.com/vvvanthe)
